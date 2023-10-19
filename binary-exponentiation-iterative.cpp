@@ -11,7 +11,7 @@ int binPow(int a, int b)
         if (b & 1) // if b is odd
             res = res * a;
         a = a * a;
-        b >>= 1; // b = b/2
+        b >>= 1; // divide b by 2
     }
     return res;
 }
@@ -19,16 +19,16 @@ int binPow(int a, int b)
 // Calculates a^b (mod m) in O(log(b))
 int binPowMod(int a, int b, int m)
 {
-    a %= m;
-    int res = 1;
-    while (b)
-    {
-        if (b & 1) // if b is odd
-            res = res * a % m;
-        a = a * a % m;
-        b >>= 1; // b = b/2
-    }
-    return res;
+	a %= m;
+
+	int res = 1;
+	while (b)
+	{
+		if (b & 1) res = (res * a) % m;
+		a = (a * a) % m;
+		b >>= 1; // b = b / 2
+	}
+	return res;
 }
 
 /*
