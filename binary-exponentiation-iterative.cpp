@@ -31,6 +31,11 @@ int binPowMod(int a, int b, int m)
     return res;
 }
 
+/*
+    Explanations of the algorithm:
+    https://youtu.be/K8mJ27S72v0 (Luv - Hindi)
+*/
+
 int main()
 {
     cout << binPow(2, 10) << endl; // 1024
